@@ -1,0 +1,97 @@
+# Ignore Gradle build directory
+/build/
+/out/
+
+# Ignore IntelliJ IDEA project files
+/.idea
+*.iws
+*.iml
+*.ipr
+
+# Ignore Eclipse project files
+.project
+.classpath
+.caches
+.settings/
+target/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.swp
+*~
+
+# Ignore specific files and directories in the root directory
+.gradle
+/.gradle
+/gradlew
+/gradlew.bat
+/mvnw
+/mvnw.cmd
+
+# Ignore local environment-specific files
+.env
+
+# Ignore build results
+*.jar
+*.war
+*.ear
+
+# Ignore dependency caches
+**/node_modules/
+**/bower_components/
+
+# Ignore coverage reports
+/coverage/
+/.jacoco/
+
+# Ignore database files
+*.db
+
+# Ignore generated files
+/generated/
+/build/generated/
+/target/generated-sources/
+/target/generated-test-sources/
+
+# Ignore test results
+/test-results/
+/test-output/
+/surefire-reports/
+/failsafe-reports/
+
+# Ignore static resources and uploads
+/static/uploads/
+/public/uploads/
+/public/images/uploads/
+/static/images/uploads/
+
+# Ignore documentation files
+/docs/
+/build/docs/
+/target/docs/
+
+# Ignore sensitive files
+/secrets/
+/keys/
+/certs/
+/passwords/
+
+# Ignore application-specific files
+*.pid
+*.seed
+*.key
+
+# Ignore other files
+*.backup
+*.bak
+
+# Ignore images directory
+images/
