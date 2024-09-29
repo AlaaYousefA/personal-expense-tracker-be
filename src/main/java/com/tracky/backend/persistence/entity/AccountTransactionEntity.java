@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity(name = "account_transaction")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,14 +19,17 @@ public class AccountTransactionEntity {
     @Column(name = "id")
     private String id;
 
-    @Column(name = "ammount")
-    private Long ammount;
+    @Column(name = "amount")
+    private Long amount;
 
    @Column(name = "payment_type")
    @Enumerated(EnumType.STRING)
     private PaymentTypeEnum paymentType;
 
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")
-    private AccountEntity accountId;
+    private AccountEntity account;
 }

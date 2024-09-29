@@ -5,14 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SysAuthentication {
-    private String username;
+public class Category {
+    private String id;
 
-    private String password;
+    private String name;
 
-    private String token;
+    private byte[] icon;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 }

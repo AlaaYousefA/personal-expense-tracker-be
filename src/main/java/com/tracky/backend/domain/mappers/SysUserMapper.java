@@ -8,11 +8,9 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface SysUserMapper {
 
-    @Mapping(source = "accountId.id", target = "accountId")
+    @Mapping(source = "account.id", target = "accountId")
     SysUser entityToModel(SysUserEntity sysUserEntity);
 
-    @Mapping(source = "accountId", target = "accountId.id")
+    @Mapping(source = "accountId", target = "account.id")
     SysUserEntity modelToEntity(SysUser sysUser);
-
-
 }

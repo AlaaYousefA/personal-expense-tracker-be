@@ -18,6 +18,4 @@ public class AccountController {
     public ResponseEntity<Long> getTotalBalance(@PathVariable String userId) {
         return ResponseEntity.ok(accountService.getTotalBalance(userId));
     }
-
-
 }

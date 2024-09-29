@@ -1,9 +1,9 @@
 package com.tracky.backend.domain.model;
 
 import com.tracky.backend.persistence.entity.AccountEntity;
-import jakarta.persistence.Column;
+import com.tracky.backend.persistence.entity.CategoryEntity;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,20 +15,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SysUser {
+public class ExpenseTransaction {
     private String id;
-
-    private String username;
-
-    private String password;
-
-    private String email;
-
-    private byte[] image;
 
     private String accountId;
 
-    private LocalDateTime createdAt;
+    private String categoryId;
 
-    private LocalDateTime updatedAt;
+    private LocalDateTime createdAt;
 }

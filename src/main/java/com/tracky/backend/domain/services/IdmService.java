@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-@Data
 public class IdmService {
 //    public SysUser signup(SysUser user) {
 //        user.setPassword(passwordEncoder.encode(user.getPassword()));

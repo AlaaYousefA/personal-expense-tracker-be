@@ -1,9 +1,8 @@
 package com.tracky.backend.domain.model;
 
+import com.tracky.backend.domain.enums.PaymentTypeEnum;
 import com.tracky.backend.persistence.entity.AccountEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,20 +14,14 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SysUser {
+public class AccountTransaction {
     private String id;
 
-    private String username;
+    private Long amount;
 
-    private String password;
-
-    private String email;
-
-    private byte[] image;
+    private PaymentTypeEnum paymentType;
 
     private String accountId;
 
     private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
 }

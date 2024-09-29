@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,10 +32,19 @@ public class AccountEntity {
     @Column(name = "save_balance")
     private Long saveBalance;
 
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private SysUserEntity userId;
 
-    @OneToMany(mappedBy = "accountId")
+    @OneToMany(mappedBy = "account")
     private List<AccountTransactionEntity> transactions;  // One account has many transactions
+
+    @OneToMany(mappedBy = "account")
+    private List<ExpenseTransactionEntity> expenseTransaction;
 }

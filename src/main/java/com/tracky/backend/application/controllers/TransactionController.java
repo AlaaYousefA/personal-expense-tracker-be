@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.*;
 public class TransactionController {
     private final TransactionService transactionService;
 
-
     @PutMapping//update total balance
     public ResponseEntity<Long> updateIncome(@RequestParam("income") Long income, @RequestParam("type") PaymentTypeEnum type) {
         return ResponseEntity.ok(transactionService.updateIncome(income, type));
     }
 
+    
 }

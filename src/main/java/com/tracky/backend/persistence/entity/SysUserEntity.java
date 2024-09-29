@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.Generated;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Entity(name = "sys_user")
 @Data
 @NoArgsConstructor
@@ -29,7 +32,13 @@ public class SysUserEntity {
     @Column(name = "image")
     private byte[] image;
 
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
     @OneToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")
-    private AccountEntity accountId;
+    private AccountEntity account;
 }

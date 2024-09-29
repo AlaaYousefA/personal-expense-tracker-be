@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-@Data
 public class TransactionService {
     private final AccountRepository accountRepository;
     public Long updateIncome(Long income, PaymentTypeEnum type) {
